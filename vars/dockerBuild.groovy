@@ -5,7 +5,8 @@
  */
 
 def call(data) {
-  echo "${data.env.SERVICE_NAME}"
+  service_name = ${data.env.SERVICE_NAME}
+  echo "SERVICE_NAME: ${service_name}"
   sh 'printenv'
 //  sh 'docker build -t ${image} .'
 }
