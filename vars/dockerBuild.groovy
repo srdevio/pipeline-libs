@@ -4,8 +4,8 @@
  * Build Docker images in a pipeline
  */
 
-def call(String image = 'NULL') {
-  echo "${image}"
+def call(data) {
+  echo "${data.env.SERVICE_NAME}"
   sh 'printenv'
-  sh 'docker build -t ${image} .'
+//  sh 'docker build -t ${image} .'
 }
