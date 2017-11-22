@@ -16,5 +16,5 @@ def call(data, env) {
   sh "kubectl config use-context ${env}"
   sh 'kubectl apply --record=true -f deployment.yml'
   sh "kubectl rollout status deployment ${service_name}"
-  hipchatSend (color: 'YELLOW', credentialId: 'rgifford-hipchat-api-send-only2', failOnError: false, message: "Just deployed ${service_name}:${tag_id} to ${env}. Thought you should know.", notify: true, room: '4018492', sendAs: 'Jenkins', server: 'api.hipchat.com', textFormat: true, v2enabled: true)
+  hipchatSend (color: 'YELLOW', credentialId: 'rgifford-hipchat-api-send-only2', failOnError: false, message: "Just deployed ${service_name}:${tag_id} to ${env}. Thought you should know.  ${BLUE_OCEAN_URL}", notify: true, room: '4018492', sendAs: 'Jenkins', server: 'api.hipchat.com', textFormat: true, v2enabled: true)
 }
