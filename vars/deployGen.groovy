@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 /**
- * Build Docker images in a pipeline
+ * Deploy to a given k8s cluster
  */
 
 def call(data, env) {
@@ -16,7 +16,4 @@ def call(data, env) {
   sh "kubectl config use-context ${env}"
   sh 'kubectl apply --record=true -f deployment.yml'
   sh "kubectl rollout status deployment ${service_name}"
-//  sh 'ls'
-//  sh "gsutil cp deployment.yml Dockerfile gs://sr-deployment-artifacts/${service_name}/${tag_id}/"
-//  sh "gsutil ls gs://sr-deployment-artifacts/${service_name}/${tag_id}/"
 }

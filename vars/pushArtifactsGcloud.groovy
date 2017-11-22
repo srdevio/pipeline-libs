@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 /**
- * Build Docker images in a pipeline
+ * Push artifacts to a storage bucket using gsutil
  */
 
 def call(data) {

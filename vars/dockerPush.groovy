@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 /**
- * Build Docker images in a pipeline
+ * Push Docker images in a pipeline
  */
 
 def call(data) {
