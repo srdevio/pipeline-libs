@@ -12,5 +12,5 @@ def call(data) {
 //  sh 'printenv'
   sh 'ls'
   sh "gsutil cp deployment.yml Dockerfile gs://sr-deployment-artifacts/${service_name}/${tag_id}/"
-  sh 'gsutil ls gs://sr-deployment-artifacts/${service_name}/${tag_id}/'
+  sh "gsutil ls gs://sr-deployment-artifacts/${service_name}/${tag_id}/"
 }
