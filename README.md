@@ -20,3 +20,5 @@ stage('Build') {
 }
 ```
 In the code above dockerBuild is the name of the lib. Passing 'this' to it gives it access to all vars and objects etc.
+
+
